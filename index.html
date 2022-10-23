@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c7b5815651.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Awsome Quiz</title>
+  </head>
+  <body onload="loadingFunc()">
+    <div class="loading-screen">
+      <img src="loading.gif" />
+    </div>
+
+    <section class="mainbox">
+      <h1><i class="fa-brands fa-html5"></i> HTML5 Quiz</h1>
+      <div id="nums">
+        <h3>1 0f 25</h3>
+      </div>
+
+      <div class="questionScreen"><h2 id="screen"></h2></div>
+      <div class="options">
+        <button><span class="option" id="ans1"></span></button>
+        <button><span class="option" id="ans2"></span></button>
+        <button><span class="option" id="ans3"></span></button>
+        <button><span class="option" id="ans4"></span></button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

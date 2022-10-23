@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bungee+Spice&family=Caveat&family=Combo&family=Concert+One&family=Dancing+Script&family=DynaPuff:wght@400;500&family=Lexend:wght@500&family=Lobster&family=Pacifico&family=Permanent+Marker&family=Poppins:wght@100&family=Qwitcher+Grypen&family=Roboto:ital,wght@1,100&family=Rubik:wght@300&family=Silkscreen&family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+:root {
+  --roundfont-family: "Varela Round", sans-serif;
+  --bg-color1: #68b2a0;
+}
+
+@mixin flex {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+body {
+  background-color: var(--bg-color1);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+html {
+  .loading-screen {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    @include flex();
+    position: fixed;
+    z-index: 99;
+    img {
+      width: 50%;
+    }
+  }
+  font-size: 62.5%;
+  .mainbox {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(0.5rem);
+    border: 0.1rem solid rgba(255, 255, 255, 0.2);
+    height: 90%;
+    width: 90%;
+    border-radius: 1rem;
+    @include flex();
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    padding: 1rem;
+
+    h1 {
+      font-size: 3.5rem;
+      position: fixed;
+      top: 5%;
+      left: 3%;
+      color: #445;
+      i {
+        color: #e44d26;
+        font-size: 3.7rem;
+      }
+    }
+    h3 {
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      font-size: 1.8rem;
+      font-family: var(--roundfont-family);
+    }
+    .questionScreen {
+      font-size: 2.3rem;
+      position: relative;
+      top: -15%;
+      width: 90%;
+      text-align: center;
+      color: rgb(58, 58, 78);
+    }
+    .options {
+      position: absolute;
+      bottom: 10%;
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      button {
+        margin: 3rem;
+        padding: 3rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(17, 15, 15, 0.836);
+        span {
+          @include flex();
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          border-radius: 1rem;
+          padding: 0.5rem;
+          top: 0;
+          left: 0;
+          font-size: 2rem;
+          color: rgb(58, 58, 78);
+        }
+      }
+    }
+    #winner {
+      width: 100%;
+      font-size: 10rem;
+      position: absolute;
+      top: 33%;
+      left: 0;
+      color: #d45f05;
+      text-align: center;
+    }
+    h5 {
+      position: absolute;
+      top: 52%;
+      font-size: 4rem;
+      color: #325c68;
+    }
+    h6 {
+      margin: 2rem;
+      font-size: 2rem;
+      position: absolute;
+      top: 58%;
+      color: #445;
+    }
+    #playAgain {
+      position: absolute;
+      right: 5%;
+      bottom: 7%;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background-color: #1260cc;
+      border: none;
+      color: white;
+      font-family: var(--roundfont-family);
+      cursor: pointer;
+      transition: 0.2s ease;
+      &:hover {
+        color: #1260cc;
+        border: 2px solid #1260cc;
+        background-color: transparent;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 615px) {
+  html {
+    font-size: 45%;
+  }
+  @media (max-width: 515px) {
+    html {
+      font-size: 38%;
+      .mainbox {
+        height: 70%;
+        width: 95%;
+        .options {
+          bottom: 15%;
+          width: 100%;
+
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            margin: 3rem;
+            padding: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 35%;
+    .mainbox {
+      h5 {
+        font-size: 3rem;
+      }
+      h6 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
